@@ -1,0 +1,30 @@
+/*Google Font Link */
+@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@100&family=Staatliches&display=swap');
+
+/* Main styles */
+body {
+    background: url('../images/pexels-hristo-fidanov-1252890.jpg') no-repeat center center;
+}
+
+header {
+    display: grid;
+    grid-template-columns: 25%;
+    grid-template-rows: auto;
+}
+
+#title {
+    grid-column-start: 2;
+    color: aqua;
+    font-family: 'Staatliches', cursive;
+    font-size: 10vw;
+    text-align: center;
+}
+
+nav {
+    grid-column-start: 3;
+    color: aqua;
+    font-family: 'Kanit', sans-serif;
+    font-size: 3vw;
+    text-align: center;
+    align-self: center;
+}
