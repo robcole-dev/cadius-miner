@@ -3,7 +3,8 @@
 
 /* Main styles */
 body {
-    background: url('../images/pexels-hristo-fidanov-1252890.jpg') no-repeat center center;
+    background: url('../images/pexels-hristo-fidanov-1252890.jpg') no-repeat;
+    height: 100%;
 }
 
 header {
@@ -12,12 +13,14 @@ header {
     grid-template-rows: auto;
 }
 
-#title {
+h1 {
+    clear: both;
     grid-column-start: 2;
     color: aqua;
     font-family: 'Staatliches', cursive;
     font-size: 10vw;
     text-align: center;
+    margin: 0;
 }
 
 nav {
@@ -26,5 +29,11 @@ nav {
     font-family: 'Kanit', sans-serif;
     font-size: 3vw;
     text-align: center;
-    align-self: center;
+}
+
+#game-area {
+    background-color: black;
+    margin: 50%;
+    height: auto;
+    width: 50%;
 }
