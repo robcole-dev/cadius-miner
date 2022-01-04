@@ -23,3 +23,37 @@ window.onclick = function(event) {
     popup.style.display = "none";
   }
 }
+
+// Game code
+
+var config = {
+  type: Phaser.AUTO,
+  width:600,
+  height:800,
+  physics: {
+    default: 'arcade',
+    arcade: {
+      gravity: {y: 300},
+      debug: false
+    }
+  },
+  scene: {
+    preload: preload,
+    create: create,
+    update: update
+  }
+};
+
+var game = new Phaser.Game(config);
+
+function preload (){
+
+}
+
+function create(){
+
+}
+
+function update(){
+  
+}
