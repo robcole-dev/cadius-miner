@@ -34,11 +34,12 @@ a {
     align-self: center;
 }
 
-#game-area {
-    background-color: black;
-    margin: 50%;
-    height: auto;
-    width: 50%;
+#gamearea {
+    text-align: center;
+}
+
+canvas {
+    border: 1px solid white;   
 }
 
 /* Popup */

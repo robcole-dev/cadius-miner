@@ -28,14 +28,13 @@ window.onclick = function(event) {
 
 var config = {
   type: Phaser.AUTO,
-  width:600,
-  height:800,
-  parent: 'game-area',
-  autoCenter: Phaser.Scale.CenterType,
+  parent: 'gamearea',
+  width: 800,
+  height: 600,
   physics: {
     default: 'arcade',
     arcade: {
-      gravity: {y: 300},
+      gravity: {y: 0},
       debug: false
     }
   },
@@ -46,22 +45,45 @@ var config = {
   }
 };
 
+var player;
+var roid1;
+var roid2;
+var roid3;
+var roid4;
+var roid5;
+var cursors;
+
 var game = new Phaser.Game(config);
 
 function preload (){
-  this.load.image('sky','../images/nebula.png');
-  this.load.image('red-roid','../images/red-roid.png');
-  this.load.image('aqua-roid','../images/aqua-roid.png');
-  this.load.image('gold-roid','../images/gold-roid.png');
-  this.load.image('grey-roid','../images/grey-roid.png');
-  this.load.image('orange-roid','../images/orange-roid.png');
-  this.load.image('ship','../images/ship.png');
+  this.load.image('sky','./assets/images/nebula.png');
+  this.load.image('red-roid','./assets/images/red-roid.png');
+  this.load.image('aqua-roid','./assets/images/aqua-roid.png');
+  this.load.image('gold-roid','./assets/images/gold-roid.png');
+  this.load.image('grey-roid','./assets/images/grey-roid.png');
+  this.load.image('orange-roid','./assets/images/orange-roid.png');
+  this.load.image('ship','./assets/images/ship.png');
 }
 
 function create(){
-  this.add.image(500,700, 'sky');
+  this.add.image(400,400,'sky');
+
+  player = this.physics.add.sprite(400,600, 'ship');
+
+  player.setCollideWorldBounds(true);
+
+  cursors = this.input.keyboard.createCursorKeys();
+
 }
 
 function update(){
-
+  if (cursors.left.isDown){
+    player.setVelocityX(-160)
+  }
+  else if (cursors.right.isDown){
+    player.setVelocityX(160)
+  }
+  else {
+    player.setVelocityX(0)
+  }
 }
