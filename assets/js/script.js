@@ -24,12 +24,14 @@ window.onclick = function(event) {
   }
 }
 
-// Game code
+// Game 
 
 var config = {
   type: Phaser.AUTO,
   width:600,
   height:800,
+  parent: 'game-area',
+  autoCenter: Phaser.Scale.CenterType,
   physics: {
     default: 'arcade',
     arcade: {
@@ -47,13 +49,19 @@ var config = {
 var game = new Phaser.Game(config);
 
 function preload (){
-
+  this.load.image('sky','../images/nebula.png');
+  this.load.image('red-roid','../images/red-roid.png');
+  this.load.image('aqua-roid','../images/aqua-roid.png');
+  this.load.image('gold-roid','../images/gold-roid.png');
+  this.load.image('grey-roid','../images/grey-roid.png');
+  this.load.image('orange-roid','../images/orange-roid.png');
+  this.load.image('ship','../images/ship.png');
 }
 
 function create(){
-
+  this.add.image(500,700, 'sky');
 }
 
 function update(){
-  
+
 }
