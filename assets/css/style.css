@@ -16,6 +16,10 @@ h1 {
     margin: 0;
 }
 
+a {
+    text-decoration: none;
+}
+
 h2 {
     clear: both;
     color: aqua;
@@ -25,15 +29,15 @@ h2 {
     margin: 0;
 }
 
-a {
-    grid-column-start: 3;
+#play a {
+    display: block;
+    clear: both;
     color: aqua;
     font-family: 'Kanit', sans-serif;
-    font-size: 3vw;
+    font-size: 4vw;
     text-align: center;
+    margin: 0;
     text-decoration: none;
-    font-weight: bold;
-    align-self: center;
 }
 
 #cadius-miner {
