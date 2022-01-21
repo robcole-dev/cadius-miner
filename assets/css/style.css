@@ -20,6 +20,10 @@ a {
     text-decoration: none;
 }
 
+li {
+    list-style-type: none;
+}
+
 h2 {
     clear: both;
     color: aqua;
@@ -42,6 +46,10 @@ h2 {
 
 #cadius-miner {
     text-align: center;
+}
+
+#how-to-play {
+    color: aqua;
 }
 
 canvas {
