@@ -55,3 +55,13 @@ h2 {
 canvas {
     border: 1px solid white;   
 }
+
+.how-to-play {
+    width: 50%;
+    margin: auto;
+    color: aqua;
+    text-align: center;
+    background-color: rgb(24, 23, 23);
+    border: 1px solid white;
+    border-radius: 5px;
+}
