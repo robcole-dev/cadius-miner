@@ -9,7 +9,7 @@ function show() {
   }
 }
 
-// Game 
+// Game
 
 const config = {
   type: Phaser.AUTO,
@@ -61,11 +61,14 @@ function create(){
   speed = Phaser.Math.GetSpeed(300,1);
 
   scoreText = this.add.text(0,0, 'Score: ', {fontSize: '16px', fill: '#00ff00'});
+  gameOverText = this.add.text(400,300, 'GAME OVER!!!', {fontSize: '32px', fill: '#00ff00'});
+  gameOverText.setOrigin(0.5);
+  gameOverText.visible = false;
 
 
   asteroid = this.physics.add.group({
     defaultKey: 'roid',
-    maxSize: 5,
+    maxSize: 15,
     createCallback: function (roid) {
         roid.setName('roid' + this.getLength());
 
@@ -163,16 +166,15 @@ function activateRoid (roid, x, y) {
   .enableBody(true, x, 0, true, true);
 }
 
-
-
-function hitAsteroid(player, asteroid) {
-  this.physics.pause();
-  player.setTint(0xff0000);
-  gameOver = True;
-}
-
 function mined(bullets, asteroid){
   asteroid.disableBody(true,true);
   score += 5;
   scoreText.setText('Score:' + score);
 }
+
+function hitAsteroid(player, asteroid) {
+
+gameOverText.visible = true;
+
+}
+
