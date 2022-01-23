@@ -30,12 +30,14 @@ var config = {
 };
 
 var player;
-var group;
+var asteroid;
 var cursors;
 var bullets;
 var speed;
 var stats;
 var lastFired = 0;
+let gameOver = false;
+
 
 var game = new Phaser.Game(config);
 
@@ -57,9 +59,9 @@ function create(){
 
   speed = Phaser.Math.GetSpeed(300,1);
 
-  group = this.add.group({
+  asteroid = this.physics.add.group({
     defaultKey: 'roid',
-    maxSize: 80,
+    maxSize: 5,
     createCallback: function (roid) {
         roid.setName('roid' + this.getLength());
         console.log('Created', roid.name);
@@ -100,11 +102,16 @@ function create(){
     }
   });
 
-  bullets = this.add.group({
+  bullets = this.physics.add.group({
     classType: Bullet,
     maxSize: 10,
     runChildUpdate: true
   });
+
+  this.physics.add.overlap(player, asteroid, hitAsteroid);
+
+  this.physics.add.collider(bullets, asteroid, hitAsteroid);
+
 }
 
 function update(time, delta){
@@ -122,11 +129,11 @@ function update(time, delta){
     }
   }
 
-  Phaser.Actions.IncY(group.getChildren(), 1);
+  Phaser.Actions.IncY(asteroid.getChildren(), 1);
 
-  group.children.iterate(function (roid) {
+  asteroid.children.iterate(function (roid) {
       if (roid.y > 600) {
-        group.killAndHide(roid);
+        asteroid.killAndHide(roid);
       }
   });
 }
@@ -144,10 +151,16 @@ function addRoid () {
   const y = Phaser.Math.Between(-64, 0);
 
   // Find first inactive sprite in group or add new sprite, and set position
-  const roid = group.get(x, y);
+  const roid = asteroid.get(x, y);
 
   // None free or already at maximum amount of sprites in group
   if (!roid) return;
 
   activateRoid(roid);
+}
+
+function hitAsteroid(player, asteroid) {
+  this.physics.pause();
+  player.setTint(0xff0000);
+  gameOver = True;
 }
