@@ -11,7 +11,7 @@ function show() {
 
 // Game 
 
-var config = {
+const config = {
   type: Phaser.AUTO,
   parent: 'cadius-miner',
   width: 800,
@@ -29,17 +29,18 @@ var config = {
   }
 };
 
-var player;
-var asteroid;
-var cursors;
-var bullets;
-var speed;
-var stats;
-var lastFired = 0;
+let player;
+let asteroid;
+let cursors;
+let bullets;
+let speed;
+let stats;
+let lastFired = 0;
 let gameOver = false;
+let score = 0;
 
 
-var game = new Phaser.Game(config);
+const game = new Phaser.Game(config);
 
 function preload (){
   this.load.image('sky','./assets/images/nebula.png');
@@ -59,15 +60,17 @@ function create(){
 
   speed = Phaser.Math.GetSpeed(300,1);
 
+  scoreText = this.add.text(0,0, 'Score: ', {fontSize: '16px', fill: '#00ff00'});
+
+
   asteroid = this.physics.add.group({
     defaultKey: 'roid',
     maxSize: 5,
     createCallback: function (roid) {
         roid.setName('roid' + this.getLength());
-        console.log('Created', roid.name);
+
     },
     removeCallback: function (roid) {
-        console.log('Removed', roid.name);
     }
   });
 
@@ -77,7 +80,7 @@ function create(){
     callback: addRoid
   });
 
-  var Bullet = new Phaser.Class({
+  let Bullet = new Phaser.Class({
     Extends: Phaser.GameObjects.Image,
 
     initialize:
@@ -110,7 +113,7 @@ function create(){
 
   this.physics.add.overlap(player, asteroid, hitAsteroid);
 
-  this.physics.add.collider(bullets, asteroid, hitAsteroid);
+  this.physics.add.collider(bullets, asteroid, mined);
 
 }
 
@@ -138,13 +141,6 @@ function update(time, delta){
   });
 }
 
-function activateRoid (roid) {
-  roid
-  .setActive(true)
-  .setVisible(true)
-  .setTint(Phaser.Display.Color.RandomRGB().color)
-}
-
 function addRoid () {
   // Random position above screen
   const x = Phaser.Math.Between(10, 800);
@@ -156,11 +152,27 @@ function addRoid () {
   // None free or already at maximum amount of sprites in group
   if (!roid) return;
 
-  activateRoid(roid);
+  activateRoid(roid, x, y);
 }
+
+function activateRoid (roid, x, y) {
+  roid
+  .setActive(true)
+  .setVisible(true)
+  .setTint(Phaser.Display.Color.RandomRGB().color)
+  .enableBody(true, x, 0, true, true);
+}
+
+
 
 function hitAsteroid(player, asteroid) {
   this.physics.pause();
   player.setTint(0xff0000);
   gameOver = True;
+}
+
+function mined(bullets, asteroid){
+  asteroid.disableBody(true,true);
+  score += 5;
+  scoreText.setText('Score:' + score);
 }
