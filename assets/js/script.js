@@ -67,9 +67,15 @@ function create(){
 
   scene = this
 
+  this.input.addPointer(1);
+
   this.add.image(400,400,'sky');
 
-  player = this.physics.add.sprite(400,600, 'ship');
+  player = this.physics.add.sprite(400,600, 'ship').setInteractive({draggable: true});
+
+  player.on('drag', function(pointer, dragX){
+    this.x = dragX;
+  });
 
   player.setCollideWorldBounds(true);
 
@@ -159,6 +165,7 @@ function update(time, delta){
         asteroid.killAndHide(roid);
       }
   });
+
 }
 
 function addRoid () {
