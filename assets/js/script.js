@@ -16,6 +16,19 @@ const config = {
   parent: 'cadius-miner',
   width: 800,
   height: 600,
+  scale: {
+    parent: 'cadius-miner',
+    mode: Phaser.Scale.FIT,
+    min: {
+      width: 400,
+      height: 300
+    },
+    max: {
+      width: 800,
+      height: 600
+    },
+    zoom: 1,
+  },
   physics: {
     default: 'arcade',
     arcade: {
@@ -38,6 +51,7 @@ let stats;
 let lastFired = 0;
 let gameOver = false;
 let score = 0;
+let scene;
 
 
 const game = new Phaser.Game(config);
@@ -50,6 +64,9 @@ function preload (){
 }
 
 function create(){
+
+  scene = this
+
   this.add.image(400,400,'sky');
 
   player = this.physics.add.sprite(400,600, 'ship');
@@ -114,7 +131,7 @@ function create(){
     runChildUpdate: true
   });
 
-  this.physics.add.overlap(player, asteroid, hitAsteroid);
+  this.physics.add.collider(player, asteroid, hitAsteroid);
 
   this.physics.add.collider(bullets, asteroid, mined);
 
@@ -176,5 +193,7 @@ function hitAsteroid(player, asteroid) {
 
 gameOverText.visible = true;
 
-}
+scene.scene.pause();
 
+
+}
