@@ -20,6 +20,12 @@ a {
     text-decoration: none;
 }
 
+ul {
+    clear: both;
+    margin: 0;
+    padding: 0;
+}
+
 li {
     list-style: none;
 }
