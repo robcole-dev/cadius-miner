@@ -110,7 +110,7 @@ function create(){
   // Asteroid
   asteroid = this.physics.add.group({
     defaultKey: 'roid',
-    maxSize: 15,
+    maxSize: 25,
     createCallback: function (roid) {
         roid.setName('roid' + this.getLength());
 
