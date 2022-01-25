@@ -55,7 +55,6 @@ let asteroid;
 let cursors;
 let bullets;
 let speed;
-let stats;
 let lastFired = 0;
 let gameOver = false;
 let score = 0;
@@ -74,7 +73,7 @@ function preload (){
 // Create - this creates the game scene
 function create(){
   // defining this as scene
-  scene = this
+  scene = this;
   
   // add background to game
   this.add.image(400,400,'sky');
