@@ -11,6 +11,10 @@ function show() {
   }
 }
 
+function gameRestart() {
+  location.reload();
+}
+
 // Game
 
 // Game Configuration
@@ -237,6 +241,15 @@ function hitAsteroid(player, asteroid) {
 gameOverText.visible = true;
 gameOver = true;
 scene.scene.pause();
+restart();
+}
 
-
+// Displays restart game buton when game ends
+function restart() {
+  let gameover = document.getElementById("game-over");
+  if (gameover.style.display === "none") {
+    gameover.style.display = "block";
+  } else {
+    gameover.style.display = "none";
+  }
 }
