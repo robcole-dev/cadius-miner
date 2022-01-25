@@ -10,7 +10,7 @@ function show() {
     display.style.display = "none";
   }
 }
-
+// function to reload the page for game restart
 function gameRestart() {
   location.reload();
 }
@@ -128,13 +128,13 @@ function create(){
 
   let Bullet = new Phaser.Class({
     Extends: Phaser.GameObjects.Image,
-
+    // sets the bullets image and speed
     initialize:
     function Bullet (scene){
       Phaser.GameObjects.Image.call(this, scene, 0, 0, 'bullet');
       this.speed = Phaser.Math.GetSpeed(400,1);
     },
-
+    // gets current position of ship when fire is triggered
     fire: function (x,y){
       this.setPosition(x, y - 50);
       this.setActive(true);
@@ -150,7 +150,7 @@ function create(){
       }
     }
   });
-
+  // creates a group for the bullets and sets a class and max number
   bullets = this.physics.add.group({
     classType: Bullet,
     maxSize: 10,
