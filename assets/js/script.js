@@ -13,6 +13,7 @@ function show() {
 
 // Game
 
+// Game Configuration
 const config = {
   type: Phaser.AUTO,
   parent: 'cadius-miner',
@@ -44,6 +45,7 @@ const config = {
   }
 };
 
+// Game global Variables
 let player;
 let asteroid;
 let cursors;
@@ -55,9 +57,9 @@ let gameOver = false;
 let score = 0;
 let scene;
 
-
 const game = new Phaser.Game(config);
 
+// Preload for all images used in game
 function preload (){
   this.load.image('sky','./assets/images/nebula.png');
   this.load.image('roid','./assets/images/grey-roid.png');
@@ -65,32 +67,42 @@ function preload (){
   this.load.image('bullet','./assets/images/bullet.png');
 }
 
+// Create - this creates the game scene
 function create(){
-
+  // defining this as scene
   scene = this
-
-  this.input.addPointer(1);
-
+  
+  // add background to game
   this.add.image(400,400,'sky');
-
+  
+  //Defines player and asigns the the image
   player = this.physics.add.sprite(400,600, 'ship').setInteractive({draggable: true});
-
+  
+  // Controls for Mobile device
   player.on('drag', function(pointer, dragX){
     this.x = dragX;
   });
 
+  this.input.addPointer(2);
+
+  pointer2 = this.input.pointer2;
+
+  //Sets player to collide with world boundries
   player.setCollideWorldBounds(true);
 
+  // Controls for keyboard
   cursors = this.input.keyboard.createCursorKeys();
 
+  // Defines the varable speed
   speed = Phaser.Math.GetSpeed(300,1);
 
+  // text overlay for score and game over.
   scoreText = this.add.text(0,0, 'Score: ', {fontSize: '16px', fill: '#00ff00'});
   gameOverText = this.add.text(400,300, 'GAME OVER!!!', {fontSize: '32px', fill: '#00ff00'});
   gameOverText.setOrigin(0.5);
   gameOverText.visible = false;
 
-
+  // Asteroid
   asteroid = this.physics.add.group({
     defaultKey: 'roid',
     maxSize: 15,
@@ -102,6 +114,7 @@ function create(){
     }
   });
 
+  // Bullets
   this.time.addEvent({
     delay: 100,
     loop: true,
@@ -139,18 +152,23 @@ function create(){
     runChildUpdate: true
   });
 
+  // Collider for player and asteroids
   this.physics.add.collider(player, asteroid, hitAsteroid);
 
+  // Collider for bullets and asteroids
   this.physics.add.collider(bullets, asteroid, mined);
 
 }
 
+// Update funtion for while game is in play
 function update(time, delta){
+  // Keyboard commands for moving player
   if (cursors.left.isDown)
     {player.x -= speed * delta;}
   else if (cursors.right.isDown)
     {player.x += speed * delta;}
 
+  // Keyboard command for shooting
   if(cursors.space.isDown && time > lastFired){
     var bullet = bullets.get();
 
@@ -160,6 +178,17 @@ function update(time, delta){
     }
   }
 
+  // controls for shooting on mobile device
+  if (pointer2.isDown && time > lastFired){
+    var bullet = bullets.get();
+
+    if (bullet){
+      bullet.fire(player.x, player.y);
+      lastFired = time + 50;
+    }
+  }
+
+  // Asteroids spawning
   Phaser.Actions.IncY(asteroid.getChildren(), 1);
 
   asteroid.children.iterate(function (roid) {
@@ -184,6 +213,7 @@ function addRoid () {
   activateRoid(roid, x, y);
 }
 
+// Additional Asteroid spawn code
 function activateRoid (roid, x, y) {
   roid
   .setActive(true)
@@ -192,12 +222,14 @@ function activateRoid (roid, x, y) {
   .enableBody(true, x, 0, true, true);
 }
 
+// Update Score function
 function mined(bullets, asteroid){
   asteroid.disableBody(true,true);
   score += 5;
   scoreText.setText('Score:' + score);
 }
 
+// Ship collides with Asteroid
 function hitAsteroid(player, asteroid) {
 
 gameOverText.visible = true;
