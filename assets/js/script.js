@@ -1,3 +1,5 @@
+/* jshint esversion: 8 */
+
 // Function to display how to play instructions
 
 function show() {
