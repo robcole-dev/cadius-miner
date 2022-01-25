@@ -1,5 +1,8 @@
 /* jshint esversion: 8 */
 
+// event listeners
+document.getElementById("game-over").addEventListener("click", gameRestart);
+
 // Function to display how to play instructions
 
 function show() {
