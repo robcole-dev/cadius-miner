@@ -71,3 +71,15 @@ canvas {
     border: 1px solid white;
     border-radius: 5px;
 }
+
+#game-over {
+    width: 200px;
+    color: aqua;
+    font-size: 2vw;
+    font-family: 'Staatliches', cursive;;
+    background-color: rgb(24, 23, 23);
+    border: 1px solid white;
+    border-radius: 5px;
+    text-align: center;
+    margin: auto;
+}
