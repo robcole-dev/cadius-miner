@@ -130,7 +130,7 @@ Alternatively, if using Git pod, you can click below to create your own workspac
 
 ### Media
 
-- The images used for the site and game
+The images used for the site and game
  - Background image [pexels](https://www.pexels.com/)
  - The ship [SeekPNG](https://www.seekpng.com/ipng/u2q8a9u2e6a9i1t4_spaceship-spaceship-spacecraft-game-design-concept-red-spaceship/)
  - The Asteroid [PNG EGG](https://www.pngegg.com/en/png-tsprz)
