@@ -102,8 +102,8 @@ function create(){
   speed = Phaser.Math.GetSpeed(300,1);
 
   // text overlay for score and game over.
-  scoreText = this.add.text(0,0, 'Score: ', {fontSize: '16px', fill: '#00ff00'});
-  gameOverText = this.add.text(400,300, 'GAME OVER!!!', {fontSize: '32px', fill: '#00ff00'});
+  scoreText = this.add.text(0,0, 'Score: ', {fontSize: '25px', fill: '#00ff00'});
+  gameOverText = this.add.text(400,300, 'GAME OVER!!!', {fontSize: '50px', fill: '#00ff00'});
   gameOverText.setOrigin(0.5);
   gameOverText.visible = false;
 
