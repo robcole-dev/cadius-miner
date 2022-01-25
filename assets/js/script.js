@@ -23,8 +23,8 @@ const config = {
     parent: 'cadius-miner',
     mode: Phaser.Scale.FIT,
     min: {
-      width: 400,
-      height: 300
+      width: 380,
+      height: 285
     },
     max: {
       width: 800,
