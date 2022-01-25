@@ -85,6 +85,7 @@ function create(){
 
   this.input.addPointer(2);
 
+  pointer1 = this.input.pointer1;
   pointer2 = this.input.pointer2;
 
   //Sets player to collide with world boundries
@@ -197,6 +198,7 @@ function update(time, delta){
       }
   });
 
+
 }
 
 function addRoid () {
@@ -233,7 +235,7 @@ function mined(bullets, asteroid){
 function hitAsteroid(player, asteroid) {
 
 gameOverText.visible = true;
-
+gameOver = true;
 scene.scene.pause();
 
 
