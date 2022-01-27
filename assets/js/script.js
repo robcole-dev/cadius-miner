@@ -18,6 +18,8 @@ function gameRestart() {
 
 // Game
 
+
+
 // Game Configuration
 const config = {
   type: Phaser.AUTO,
@@ -43,11 +45,7 @@ const config = {
       debug: false
     }
   },
-  scene: {
-    preload: preload,
-    create: create,
-    update: update
-  }
+  scene: [mainMenu, Game, gameOver]
 };
 
 // Game global Variables
