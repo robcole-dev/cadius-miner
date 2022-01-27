@@ -1,6 +1,6 @@
-class mainMenu extends Phaser.Scene {
+class gameOver extends Phaser.Scene {
     constructor () {
-        super('gameOver');
+        super({key:'gameOver'});
     }
 
     init() {
