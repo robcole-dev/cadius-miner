@@ -10,6 +10,7 @@ function show() {
     display.style.display = "none";
   }
 }
+
 // function to reload the page for game restart
 function gameRestart() {
   location.reload();
