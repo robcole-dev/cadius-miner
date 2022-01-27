@@ -138,9 +138,3 @@ canvas {
     color: red;
     transition: all 0.2s ease-in-out;
 }
-
-@keyframes scribble {
-    to {
-        stroke-dashoffset: 0;
-    }
-}
