@@ -1,25 +1,28 @@
-class gameOver extends Phaser.Scene {
-    constructor () {
-        super({key:'gameOver'});
-    }
+let gameOver = new Phaser.Class({
+    Extends: Phaser.Scene,
+    initialize: function(){
+        Phaser.Scene.call(this,{
+        key: "gameOver",
+        })
+    },
 
-    init() {
-        // Used to prepare data
-    }
+    preload: function() {
+        this.load.image('sky','./assets/images/nebula.png');
+    },
 
-    preload() {
-        // Used for preloading assets into your scene, such as
-        // • images
-        // • sounds
-    }
+    create: function() {
+        scene = this
 
-    create(data) {
-        // Used to add objects to your game
-    }
+        // add background to game
+        this.add.image(400,400,'sky');
 
-    update(time, delta) {
+        gameOverText = this.add.text(400,300, 'GAME OVER!!!', {fontSize: '50px', fill: '#00ff00'});
+        gameOverText.setOrigin(0.5);
+        scoreText = this.add.text(400,350, 'You scored ' + score, {fontSize: '50px', fill: '#00ff00'});
+        scoreText.setOrigin(0.5);
+    },
+
+    update: function() {
         // Used to update your game. This function runs constantly
-    }
-}
-
-export default gameOver;
+    },
+})

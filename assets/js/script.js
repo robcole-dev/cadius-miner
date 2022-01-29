@@ -39,7 +39,7 @@ let config = {
   scene: [
     mainMenu, 
     mainGame, 
-    // gameOver
+    gameOver
   ],
 };
 

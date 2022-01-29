@@ -5,7 +5,6 @@ let bullets
 let speed
 let stats
 let lastFired = 0
-let gameOver = false
 let score = 0
 let scene
 let mainGame = new Phaser.Class({
@@ -56,9 +55,6 @@ let mainGame = new Phaser.Class({
 
         // text overlay for score and game over.
         scoreText = this.add.text(0,0, 'Score: ', {fontSize: '25px', fill: '#00ff00'});
-        gameOverText = this.add.text(400,300, 'GAME OVER!!!', {fontSize: '50px', fill: '#00ff00'});
-        gameOverText.setOrigin(0.5);
-        gameOverText.visible = false;
 
         // Asteroid
         asteroid = this.physics.add.group({
@@ -184,8 +180,7 @@ let mainGame = new Phaser.Class({
     
       // Ship collides with Asteroid
       hitAsteroid(player, asteroid) {
-          gameOverText.visible = true;
           gameOver = true;
-          scene.scene.pause();
+          scene.scene.start('gameOver');
       },  
 })
