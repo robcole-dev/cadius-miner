@@ -11,15 +11,8 @@ function show() {
   }
 };
 
-
-// Game
-import mainMenu from './mainMenu.js';
-import mainGame from './mainGame.js';
-import gameOver from './gameOver.js';
-
-
 // Game Configuration
-const config = {
+let config = {
   type: Phaser.AUTO,
   parent: 'cadius-miner',
   width: 800,
@@ -43,7 +36,11 @@ const config = {
       debug: false
     }
   },
-  scene: [mainMenu, mainGame, gameOver]
+  scene: [
+    mainMenu, 
+    mainGame, 
+    // gameOver
+  ],
 };
 
 let game = new Phaser.Game(config);

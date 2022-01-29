@@ -1,33 +1,24 @@
-class mainGame extends Phaser.Scene {
-    constructor () {
-        super('mainGame');
-    }
+let mainGame = new Phaser.Class({
+    Extends: Phaser.Scene,
+    initialize: function (){
+        Phaser.Scene.call(this,{
+        key: "mainGame",
+    })
+    },
 
-    preload() {
+    preload: function() {
         // Preload for all images used in game
         this.load.image('sky','./assets/images/nebula.png');
         this.load.image('roid','./assets/images/grey-roid.png');
         this.load.image('ship','./assets/images/ship.png');
         this.load.image('bullet','./assets/images/bullet.png');
-    }
+    },
 
-    create(data) {
-        let scene;
-        let player;
-        let pointer1;
-        let pointer2;
-        let cursors;
-        let gameOver = false;
-        let score = 0;
-        let asteroid;
-        let bullets;
-        let speed;
-        let scoreText;
-        let gameOverText;
+    create: function() {
+        // defining this as scene
         let addRoid;
         let hitAsteroid;
         let mined;
-        // defining this as scene
         scene = this;
   
         // add background to game
@@ -116,9 +107,10 @@ class mainGame extends Phaser.Scene {
         // Collider for bullets and asteroids
         this.physics.add.collider(bullets, asteroid, mined);
 
-    }
+    },
 
-    update(time, delta, cursors, player, bullet, pointer2, asteroid) {
+    update: function(time, delta) {
+        let lastFired;
           // Keyboard commands for moving player
         if (cursors.left.isDown)
             {player.x -= speed * delta;}
@@ -153,8 +145,8 @@ class mainGame extends Phaser.Scene {
             asteroid.killAndHide(roid);
             }
         });
-    }
-    addRoid () {
+    },
+    addRoid: function() {
       // Random position above screen
       const x = Phaser.Math.Between(10, 800);
       const y = Phaser.Math.Between(-64, 0);
@@ -166,31 +158,28 @@ class mainGame extends Phaser.Scene {
       if (!roid) return;
 
       activateRoid(roid, x, y);
-    }
+    },
     // Additional Asteroid spawn code
-    activateRoid (roid, x, y) {
+    activateRoid: function (roid, x, y) {
         roid
         .setActive(true)
         .setVisible(true)
         .setTint(Phaser.Display.Color.RandomRGB().color)
         .enableBody(true, x, 0, true, true);
-    }
+    },
   
     // Update Score function
-    mined(bullets, asteroid){
+    mined: function(bullets, asteroid){
         asteroid.disableBody(true,true);
         score += 5;
         scoreText.setText('Score:' + score);
-    }
+    },
   
     // Ship collides with Asteroid
-    hitAsteroid(player, asteroid) {
+    hitAsteroid: function(player, asteroid) {
         gameOverText.visible = true;
         gameOver = true;
         scene.scene.pause();
-    }
+    },
     
-}
-
-
-export default mainGame;
+})

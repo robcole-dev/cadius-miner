@@ -1,18 +1,18 @@
-class mainMenu extends Phaser.Scene {
-    constructor () {
-        super('mainMenu');
-    }
-
-    preload() {
+let mainMenu = new Phaser.Class ({
+    Extends: Phaser.Scene,
+    initialize: function mainMenu() {
+        Phaser.Scene.call(this, {
+            key: "mainMenu",
+        });
+    },
+    
+    preload: function() {
         this.load.image('sky','./assets/images/nebula.png');
-    }
+    },
 
-    create(data, startScene) {
+    create: function() {
         this.add.image(400,400,'sky');
-        let scene;
-        let playText;
         
-
         scene = this;
 
         playText = this.add.text(350,300,'Play', {fontSize: '50px', fill: '#00ff00'});
@@ -22,11 +22,5 @@ class mainMenu extends Phaser.Scene {
         this.input.on('pointerdown', function(){
             scene.scene.start('mainGame');
         });
-    }
-
-    update(time, delta) {
-        // Used to update your game. This function runs constantly
-    }
-}
-
-export default mainMenu;
+    },
+});
