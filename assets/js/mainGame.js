@@ -75,7 +75,7 @@ let mainGame = new Phaser.Class({
         this.time.addEvent({
             delay: 100,
             loop: true,
-            callback: addRoid
+            callback: this.addRoid
         });
 
         let Bullet = new Phaser.Class({
@@ -110,15 +110,14 @@ let mainGame = new Phaser.Class({
         });
 
         // Collider for player and asteroids
-        this.physics.add.collider(player, asteroid, hitAsteroid);
+        this.physics.add.collider(player, asteroid, this.hitAsteroid);
 
         // Collider for bullets and asteroids
-        this.physics.add.collider(bullets, asteroid, mined);
+        this.physics.add.collider(bullets, asteroid, this.mined);
 
     },
 
     update: function(time, delta) {
-        let lastFired;
           // Keyboard commands for moving player
         if (cursors.left.isDown)
             {player.x -= speed * delta;}
@@ -153,5 +152,40 @@ let mainGame = new Phaser.Class({
             asteroid.killAndHide(roid);
             }
         });
-    },  
+    },
+    addRoid() {
+        // Random position above screen
+        const x = Phaser.Math.Between(10, 800);
+        const y = Phaser.Math.Between(-64, 0);
+    
+        // Find first inactive sprite in group or add new sprite, and set position
+        const roid = asteroid.get(x, y);
+    
+        // None free or already at maximum amount of sprites in group
+        if (!roid) return;
+    
+        scene.activateRoid(roid, x, y);
+      },
+      // Additional Asteroid spawn code
+      activateRoid(roid, x, y) {
+          roid
+          .setActive(true)
+          .setVisible(true)
+          .setTint(Phaser.Display.Color.RandomRGB().color)
+          .enableBody(true, x, 0, true, true);
+      },
+    
+      // Update Score function
+      mined(bullets, asteroid){
+          asteroid.disableBody(true,true);
+          score += 5;
+          scoreText.setText('Score:' + score);
+      },
+    
+      // Ship collides with Asteroid
+      hitAsteroid(player, asteroid) {
+          gameOverText.visible = true;
+          gameOver = true;
+          scene.scene.pause();
+      },  
 })
