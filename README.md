@@ -72,11 +72,6 @@ Below are a list of key features and future features.
 
  - Lives will give the player more of a chance to score lots of points.
 
-- __Scenes__
-
- - Create a holding scene which will allow the player to view high scores or start the game.
- - Create a Game Over Scene so the player can enter their name if they manage to get on the high scores table.
-
 ## Technologies Used
 
 During the developemnt of the site and game a number of programs and web based applications were used. You can find a list of these below:
