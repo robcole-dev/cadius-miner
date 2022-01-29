@@ -16,13 +16,15 @@ let gameOver = new Phaser.Class({
         // add background to game
         this.add.image(400,400,'sky');
 
-        gameOverText = this.add.text(400,300, 'GAME OVER!!!', {fontSize: '50px', fill: '#00ff00'});
+        gameOverText = this.add.text(400,200, 'GAME OVER!!!', {fontSize: '50px', fill: '#00ff00'});
         gameOverText.setOrigin(0.5);
-        scoreText = this.add.text(400,350, 'You scored ' + score, {fontSize: '50px', fill: '#00ff00'});
+        scoreText = this.add.text(400,250, 'You scored ' + score, {fontSize: '50px', fill: '#00ff00'});
         scoreText.setOrigin(0.5);
-    },
+        retryText = this.add.text(400,350, 'Click to try again!', {fontSize: '50px', fill: '#00ff00'});
+        retryText.setOrigin(0.5);
 
-    update: function() {
-        // Used to update your game. This function runs constantly
+        this.input.on('pointerdown', function(){
+            scene.scene.start('mainMenu');
+        });
     },
 })
