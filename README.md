@@ -34,8 +34,9 @@ Links to the fonts used:
 
 Below are a couple of screenshots of Wireframes created for this project.
 
-
-
+![Index Page](documentation/readme/index.png)
+![Game Page](documentation/readme/game.png)
+![The Game](documentation/readme/game-screen.png)
 
 ## Features 
 
