@@ -57,20 +57,42 @@ Below are a list of key features and future features.
  - The game has 2 types of control built in. 1 is the mouse which drags the ship from left to right, the other is the arrow keys on a keyboard.
  - The game keeps track of the players score in the top right corner.
 
+- __The Main Menu__
+
+- The first screen on the game allows the user to click play once they are ready to start playing.
+
+- __The Game Over screen__
+
+- This screen is displayed once the player has hit an asteroid. This tells the player that the game is over and shows their score. It also allows the user to restart the game when they are ready.
 
 ### Features Left to Implement
+Below are a list of features i would have liked to implment but didn't have the time or knowledge to:
 
 - __High Scores__
 
- - A high scores table that will keep track of the top 10 high scores.
+ - Currently there is no high scores kept within the game. I would like to add a high scores table that at the point of the game over screen the player gets to see if they have managed to get on the top 10 or not. If they managed to get on the top 10 then the game allows initials to be entered, which would be displayed on the top 10 board.
 
 - __Power ups__
 
- - Powers to be collected in the game to allow an asortment of things such as faster weapons or shields.
+ - There are currently no power ups in the game, it is a simple shooter. I would like to add the ability to collect power ups such as shields and more powerfull guns. This would add more depth to the game and would help the player score more points.
 
 - __Lives__
 
- - Lives will give the player more of a chance to score lots of points.
+ - There is currently no lives count in the game so once the ship crashes into an asteroid it's game over. Adding a Lives counter would allow for a more interesting game. This would also allow the player to continue to scoring points to get onto the high scores board.
+
+ - __Enermies__
+
+ - Currently the only NPC (Non Player Characters) are the asteroids. I would like to add more depth to the game by adding other bodies like alien ships that shoot back at the player. This would give the player more of a challenge in the game.
+
+ - __Main Menu (Updated: 27/01/22)__
+
+ - ~~Currently when the game.html is loaded it loads the game straight away which isn't ideal. I would like to add a main menu which would give the player the control to start the game when they are ready. This would also give me the ability to add banners a high scores link and other cool features.~~
+ - 27/01/2022 - This feature has been mostly implemented. The ground work of the screen has been layed down and the player has to click the play button to start the game. Once the High scores table has been implemented, a link to that screen will be added to the main menu.
+
+ - __Game Over (Updated: 27/01/22)__
+
+ - ~~Currently when the game is ended, it pauses the screen and displays a game over text. There is no way to restart or see your score. I would like to implment a new screen here that takes the player to a high score screen where they can enter initals if they get on the high scores board.~~
+ - 27/01/2022 - This feature has been partly implmented. The ground work for the game over screen has been finished. Which allows me to expand the screen once other features like the High Scores board have been implmented.
 
 ## Technologies Used
 
