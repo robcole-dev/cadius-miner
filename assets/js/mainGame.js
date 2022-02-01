@@ -21,6 +21,7 @@ let mainGame = new Phaser.Class({
         this.load.image('roid','./assets/images/grey-roid.png');
         this.load.image('ship','./assets/images/ship.png');
         this.load.image('bullet','./assets/images/bullet.png');
+        this.load.spritesheet('boom', './assets/images/boom.png', { frameWidth: 32, frameHeight: 32, endFrame: 32 });
     },
 
     create: function() {
@@ -33,6 +34,12 @@ let mainGame = new Phaser.Class({
         
         //Defines player and asigns the the image
         player = this.physics.add.sprite(400,600, 'ship').setInteractive({draggable: true});
+        //Defines explosion and sets image
+        this.anims.create({
+            key: 'bang',
+            frames: this.anims.generateFrameNumbers('boom'),
+            frameRate: 10
+        });
         
         // Controls for Mobile device
         player.on('drag', function(pointer, dragX){
@@ -74,11 +81,11 @@ let mainGame = new Phaser.Class({
             callback: this.addRoid
         });
 
-        let Bullet = new Phaser.Class({
+        let bullet = new Phaser.Class({
             Extends: Phaser.GameObjects.Image,
             // sets the bullets image and speed
             initialize:
-            function Bullet (scene){
+            function bullet (scene){
             Phaser.GameObjects.Image.call(this, scene, 0, 0, 'bullet');
             this.speed = Phaser.Math.GetSpeed(400,1);
             },
@@ -100,7 +107,7 @@ let mainGame = new Phaser.Class({
         });
         // creates a group for the bullets and sets a class and max number
         bullets = this.physics.add.group({
-            classType: Bullet,
+            classType: bullet,
             maxSize: 10,
             runChildUpdate: true
         });
@@ -176,6 +183,7 @@ let mainGame = new Phaser.Class({
           asteroid.disableBody(true,true);
           score += 5;
           scoreText.setText('Score:' + score);
+          
       },
     
       // Ship collides with Asteroid
