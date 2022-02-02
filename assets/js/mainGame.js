@@ -27,7 +27,6 @@ let mainGame = new Phaser.Class({
     create: function() {
         // defining this as scene
         scene = this;
-        let score = 0
   
         // add background to game
         this.add.image(400,400,'sky');
@@ -194,7 +193,6 @@ let mainGame = new Phaser.Class({
     
       // Ship collides with Asteroid
       hitAsteroid(player, asteroid) {
-          gameOver = true;
           scene.scene.start('gameOver');
       },  
 })
