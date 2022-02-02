@@ -27,7 +27,7 @@ let mainGame = new Phaser.Class({
     create: function() {
         // defining this as scene
         scene = this;
-  
+        score = 0
         // add background to game
         this.add.image(400,400,'sky');
         
