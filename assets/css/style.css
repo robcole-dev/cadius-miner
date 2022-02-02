@@ -13,19 +13,28 @@ header, nav {
 
 #main-layout {
     display: grid;
-    grid-template-columns: 50% 50%;
+    grid-template-columns: 15% 70% 15%;
 }
 
 #title {
-    grid-column-start: 1;
+    grid-column-start: 2;
     grid-row-start: 1;
     justify-self: center;
     align-self: center;
 }
 
-#ship {
+#ship-left {
     grid-column-start: 1;
-    grid-row-start: 2;
+    grid-row-start: 3;
+    justify-self: center;
+    align-self: center;
+    width: 12vw;
+    height: auto;
+}
+
+#ship-right {
+    grid-column-start: 3;
+    grid-row-start: 3;
     justify-self: center;
     align-self: center;
     width: 12vw;
@@ -34,7 +43,7 @@ header, nav {
 
 #play {
     grid-column-start: 2;
-    grid-row-start: 2;
+    grid-row-start: 3;
     justify-self: center;
     align-self: center;
 }
@@ -43,8 +52,8 @@ header, nav {
     background: transparent;
     border: none;
     padding: 0;
-    margin: 0;
-    grid-row-start: 1;
+    margin: auto;
+    grid-row-start: 2;
     grid-column-start: 2;
     text-decoration: none;
     cursor: pointer;
@@ -97,15 +106,14 @@ canvas {
 }
 
 .how-to-play {
-    width: 50%;
+    width: 100%;
     margin: auto;
     color: aqua;
     text-align: center;
     background-color: rgb(24, 23, 23);
     border: 1px solid white;
     border-radius: 5px;
-    grid-column-start: 1;
-    grid-column-end: 3;
+    grid-column-start: 2;
 }
 
 .show, .play {
