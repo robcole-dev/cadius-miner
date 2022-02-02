@@ -180,10 +180,16 @@ let mainGame = new Phaser.Class({
     
       // Update Score function
       mined(bullets, asteroid){
-          asteroid.disableBody(true,true);
-          score += 5;
-          scoreText.setText('Score:' + score);
-          
+        score += 5;
+        scoreText.setText('Score:' + score);
+        let blipp = scene.add.sprite(asteroid.x +16, asteroid.y, "bang").play("bang");
+        blipp.once("animationcomplete", function(){
+            blipp.destroy();
+        });
+        asteroid.setActive(false);
+        asteroid.setVisible(false);
+        bullets.setActive(false);
+        bullets.setVisible(false); 
       },
     
       // Ship collides with Asteroid
