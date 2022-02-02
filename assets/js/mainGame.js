@@ -26,8 +26,8 @@ let mainGame = new Phaser.Class({
 
     create: function() {
         // defining this as scene
-
         scene = this;
+        let score = 0
   
         // add background to game
         this.add.image(400,400,'sky');
@@ -179,7 +179,7 @@ let mainGame = new Phaser.Class({
       },
     
       // Update Score function
-      mined(bullets, asteroid){
+      mined(bullet, asteroid){
         score += 5;
         scoreText.setText('Score:' + score);
         let blipp = scene.add.sprite(asteroid.x +16, asteroid.y, "bang").play("bang");
@@ -188,8 +188,8 @@ let mainGame = new Phaser.Class({
         });
         asteroid.setActive(false);
         asteroid.setVisible(false);
-        bullets.setActive(false);
-        bullets.setVisible(false); 
+        bullet.setActive(false);
+        bullet.setVisible(false); 
       },
     
       // Ship collides with Asteroid
