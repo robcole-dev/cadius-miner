@@ -1,5 +1,5 @@
 # Cadius Miner
-Cadius Miner is a fun interactive space ship shooter game. The game allows players to score as many points as they can until by mining asteroids. 
+Cadius Miner is a fun interactive space ship shooter game. The game allows players to score as many points as they can by mining asteroids. The game is over once a player has been hit by an asteroid.
 
 to visit the live version of the game (hosted by Github Pages) click [here](https://robcole-dev.github.io/cadius-miner/)
 
@@ -48,30 +48,41 @@ Below are a list of key features and future features.
  - The landing page includes a how to guide for people visiting the site and a Play link to the game.
  - The How To Play link displays or hides a text field with instructions in.
 
+![Landing Page](documentation/readme/landing-page.png)
+
 - __The Game Page__
 
  - The game page is kept clean and simple.
  - The game uses a framework called Phaser, the version used is 3.
+
+![Game Page](documentation/readme/game-page.png)
 
 - __The Game__
 
  - The game has 2 types of control built in. 1 is the mouse which drags the ship from left to right, the other is the arrow keys on a keyboard.
  - The game keeps track of the players score in the top right corner.
 
+![Game](documentation/readme/game-playing.png)
+
 - __The Main Menu__
 
 - The first screen on the game allows the user to click play once they are ready to start playing.
+
+![Game Menu](documentation/readme/game-menu.png)
 
 - __The Game Over screen__
 
 - This screen is displayed once the player has hit an asteroid. This tells the player that the game is over and shows their score. It also allows the user to restart the game when they are ready.
 
+![Game Over](documentation/readme/game-gameover.png)
+
 ### Features Left to Implement
-Below are a list of features i would have liked to implment but didn't have the time or knowledge to:
+Below are a list of features I would have liked to implment but didn't have the time or knowledge to:
 
-- __High Scores__
+- __High Scores (Updated: 03/02/22)__
 
- - Currently there is no high scores kept within the game. I would like to add a high scores table that at the point of the game over screen the player gets to see if they have managed to get on the top 10 or not. If they managed to get on the top 10 then the game allows initials to be entered, which would be displayed on the top 10 board.
+ - ~~Currently there is no high scores kept within the game. I would like to add a high scores table that at the point of the game over screen the player gets to see if they have managed to get on the top 10 or not. If they managed to get on the top 10 then the game allows initials to be entered, which would be displayed on the top 10 board.~~
+ - 03/02/2022 - A High Score system has been added to the game, however this is stored in the players browser with LocalStorage. Once I have the knowledge and time to implment I will look at storing this values in a database.
 
 - __Power ups__
 
@@ -144,7 +155,7 @@ Alternatively, if using Git pod, you can click below to create your own workspac
 
 ### Content 
 
-- The framework used for the game was Phaser [Phaser Framwork](https://phaser.io/)
+- The framework used for the game was Phaser Version 3 [Phaser Framwork](https://phaser.io/)
 
 ### Media
 
