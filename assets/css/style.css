@@ -8,10 +8,6 @@
     border: none;
 }
 
-html {
-    scroll-behavior: smooth;
-}
-
 body {
     background: url('../images/background.jpg') no-repeat;
 }
@@ -105,6 +101,8 @@ li {
 
 #cadius-miner {
     text-align: center;
+    align-self: center;
+    justify-self: center;
 }
 
 #how-to-play {
@@ -112,7 +110,7 @@ li {
 }
 
 canvas {
-    border: 1px solid white;  
+    border: 1px solid white;
 }
 
 .how-to-play {
