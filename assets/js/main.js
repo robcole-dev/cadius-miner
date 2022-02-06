@@ -4,9 +4,13 @@
 
 function show() {
     let display = document.getElementById("display");
-    if (display.style.display === "none") {
-      display.style.display = "block";
+    if (display.classList.contains("hide") === true) {
+      display.classList.remove("hide");
     } else {
-      display.style.display = "none";
+      display.classList.add("hide");
     }
   };
+
+// event listeners
+let infoButton = document.getElementById('show');
+infoButton.addEventListener('click',show);

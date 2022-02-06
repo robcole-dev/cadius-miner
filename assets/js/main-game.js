@@ -130,7 +130,7 @@ let mainGame = new Phaser.Class({
 
         // Keyboard command for shooting
         if(cursors.space.isDown && time > lastFired){
-            var bullet = bullets.get();
+            let bullet = bullets.get();
 
             if (bullet){
                 bullet.fire(player.x, player.y);
