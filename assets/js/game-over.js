@@ -6,7 +6,7 @@ let gameOver = new Phaser.Class({
     initialize: function(){
         Phaser.Scene.call(this,{
         key: "gameOver",
-        })
+        });
     },
     // Preload Images for Scene
     preload: function() {
@@ -15,14 +15,14 @@ let gameOver = new Phaser.Class({
     // Create the Scene
     create: function() {
         // define scene as this
-        scene = this
-        let hscore
+        scene = this;
+        let hscore;
         // define highscore as the players local storage score
-        let highscore = localStorage.getItem(hscore)
+        let highscore = localStorage.getItem(hscore);
         // If score is higher than highscore write it to local storage
         if (score > highscore){
-            highscore = score
-            localStorage.setItem(hscore, highscore)
+            highscore = score;
+            localStorage.setItem(hscore, highscore);
         }
 
         // add background to game
@@ -44,4 +44,4 @@ let gameOver = new Phaser.Class({
             scene.scene.start('mainMenu');
         });
     },
-})
+});
