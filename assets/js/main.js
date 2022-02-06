@@ -4,10 +4,13 @@
 
 function show() {
     let display = document.getElementById("display");
+    let footer = document.getElementById("footer");
     if (display.classList.contains("hide") === true) {
       display.classList.remove("hide");
+      footer.classList.remove("footer-position");
     } else {
       display.classList.add("hide");
+      footer.classList.add("footer-position");
     }
   };
 
