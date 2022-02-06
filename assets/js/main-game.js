@@ -19,11 +19,11 @@ let mainGame = new Phaser.Class({
 
     preload: function() {
         // Preload for all images used in game
-        this.load.image('sky','./assets/images/nebula.png');
-        this.load.image('roid','./assets/images/grey-roid.png');
-        this.load.image('ship','./assets/images/ship.png');
-        this.load.image('bullet','./assets/images/bullet.png');
-        this.load.spritesheet('boom', './assets/images/boom.png', { frameWidth: 32, frameHeight: 32, endFrame: 32 });
+        this.load.image('sky','assets/images/nebula.png');
+        this.load.image('roid','assets/images/grey-roid.png');
+        this.load.image('ship','assets/images/ship.png');
+        this.load.image('bullet','assets/images/bullet.png');
+        this.load.spritesheet('boom', 'assets/images/boom.png', { frameWidth: 32, frameHeight: 32, endFrame: 32 });
     },
 
     create: function() {

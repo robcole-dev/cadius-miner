@@ -9,7 +9,7 @@ let mainMenu = new Phaser.Class ({
     },
     
     preload: function() {
-        this.load.image('sky','./assets/images/nebula.png');
+        this.load.image('sky','assets/images/nebula.png');
     },
 
     create: function() {
