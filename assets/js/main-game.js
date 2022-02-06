@@ -15,7 +15,7 @@ let mainGame = new Phaser.Class({
         Phaser.Scene.call(this,{
         key: "mainGame",
     })
-    },
+},
 
     preload: function() {
         // Preload for all images used in game
@@ -87,23 +87,23 @@ let mainGame = new Phaser.Class({
             // sets the bullets image and speed
             initialize:
             function bullet (scene){
-            Phaser.GameObjects.Image.call(this, scene, 0, 0, 'bullet');
-            this.speed = Phaser.Math.GetSpeed(400,1);
+                Phaser.GameObjects.Image.call(this, scene, 0, 0, 'bullet');
+                this.speed = Phaser.Math.GetSpeed(400,1);
             },
             // gets current position of ship when fire is triggered
             fire: function (x,y){
-            this.setPosition(x, y - 50);
-            this.setActive(true);
-            this.setVisible(true);
+                this.setPosition(x, y - 50);
+                this.setActive(true);
+                this.setVisible(true);
             },
 
             update: function (time, delta){
-            this.y -= this.speed * delta;
+                this.y -= this.speed * delta;
 
-            if (this.y < -50){
-                this.setActive(false);
-                this.setVisible(false);
-            }
+                if (this.y < -50){
+                    this.setActive(false);
+                    this.setVisible(false);
+                }
             }
         });
         // creates a group for the bullets and sets a class and max number
@@ -169,18 +169,17 @@ let mainGame = new Phaser.Class({
         if (!roid) return;
     
         scene.activateRoid(roid, x, y);
-      },
-      // Additional Asteroid spawn code
-      activateRoid(roid, x, y) {
-          roid
-          .setActive(true)
-          .setVisible(true)
-          .setTint(Phaser.Display.Color.RandomRGB().color)
-          .enableBody(true, x, 0, true, true);
-      },
-    
-      // Update Score function
-      mined(bullet, asteroid){
+    },
+    // Additional Asteroid spawn code
+    activateRoid(roid, x, y) {
+        roid
+        .setActive(true)
+        .setVisible(true)
+        .setTint(Phaser.Display.Color.RandomRGB().color)
+        .enableBody(true, x, 0, true, true);
+    },
+    // Update Score function
+    mined(bullet, asteroid){
         score += 5;
         scoreText.setText('Score:' + score);
         let blipp = scene.add.sprite(asteroid.x +16, asteroid.y, "bang").play("bang");
@@ -191,10 +190,9 @@ let mainGame = new Phaser.Class({
         asteroid.setVisible(false);
         bullet.setActive(false);
         bullet.setVisible(false); 
-      },
-    
-      // Ship collides with Asteroid
-      hitAsteroid(player, asteroid) {
-          scene.scene.start('gameOver');
-      },  
+    },
+    // Ship collides with Asteroid
+    hitAsteroid(player, asteroid) {
+        scene.scene.start('gameOver');
+    },  
 })
