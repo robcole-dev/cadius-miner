@@ -1,3 +1,5 @@
+/* jshint esversion: 8 */
+
 let gameOver = new Phaser.Class({
     Extends: Phaser.Scene,
     initialize: function(){

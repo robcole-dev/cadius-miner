@@ -1,3 +1,5 @@
+/* jshint esversion: 8 */
+
 let mainMenu = new Phaser.Class ({
     Extends: Phaser.Scene,
     initialize: function mainMenu() {
