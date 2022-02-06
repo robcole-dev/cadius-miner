@@ -15,20 +15,20 @@ body {
 header, nav {
     display: contents;
 }
-
+/* Main body grid */
 #main-layout {
     display: grid;
     grid-template-columns: 15% 70% 15%;
     grid-template-rows: 1fr auto;
 }
-
+/* Page Banner */
 #title {
     grid-column-start: 2;
     grid-row-start: 1;
     justify-self: center;
     align-self: center;
 }
-
+/* Left Red Ship */
 #ship-left {
     grid-column-start: 1;
     grid-row-start: 3;
@@ -37,7 +37,7 @@ header, nav {
     width: 12vw;
     height: auto;
 }
-
+/* Right Red Ship */
 #ship-right {
     grid-column-start: 3;
     grid-row-start: 3;
@@ -46,14 +46,14 @@ header, nav {
     width: 12vw;
     height: auto;
 }
-
+/* Play Link positioning */
 #play {
     grid-column-start: 2;
     grid-row-start: 3;
     justify-self: center;
     align-self: center;
 }
-
+/* How to Play Link */
 #show {
     background: transparent;
     border: none;
@@ -64,7 +64,7 @@ header, nav {
     text-decoration: none;
     cursor: pointer;
 }
-
+/* Heading */
 h1 {
     clear: both;
     color: aqua;
@@ -73,11 +73,11 @@ h1 {
     text-align: center;
     margin: 0;
 }
-
+/* Remove link decoration */
 a {
     text-decoration: none;
 }
-
+/* List styling */
 ul {
     clear: both;
     margin: 0;
@@ -87,7 +87,7 @@ ul {
 li {
     list-style: none;
 }
-
+/* Play link styling */
 #play a {
     display: block;
     clear: both;
@@ -98,19 +98,18 @@ li {
     margin: 0;
     text-decoration: none;
 }
-
+/* Game Area */
 #cadius-miner {
     text-align: center;
-    align-self: center;
-    justify-self: center;
-}
-
-#how-to-play {
-    color: aqua;
 }
 
 canvas {
     border: 1px solid white;
+}
+
+/* How to play extra styling */
+#how-to-play {
+    color: aqua;
 }
 
 .how-to-play {
@@ -133,16 +132,16 @@ canvas {
     text-align: center;
     margin: 0;
 }
-
+/* hover over effect */
 .show:hover, .play:hover {
     color: red;
     transition: all 0.2s ease-in-out;
 }
-
+/* How to Play hide class */
 .hide {
     display: none;
 }
-
+/* Footer */
 #footer {
     bottom:0;
     width:100%;
