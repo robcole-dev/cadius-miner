@@ -3,16 +3,100 @@
 Below is a list of test that have been carried out with screenshots.
 
 ## Browser Compatibility
+The below browsers have been tested with the deployed site.
 
+__Google Chrome__ - Full screen
+
+![Google Chrome](documentation/testing/google-chrome.png)
+
+__Microsoft Edge__ - Tablet Screen
+
+![Edge](documentation/testing/microsoft-edge.png)
+
+__Firefox__ - Phone Screen
+
+![Firefox](documentation/testing/firefox.png)
+
+__Samsung Internet App__ - Phone Screen
+
+![Samsung](documentation/testing/samsung-internet.jpg)
 
 ## Code Validation
 
+__HTML__
+
+No errors were returned when passing through the official W3C Validation
+
+- [W3C validator - Index](https://validator.w3.org/nu/?doc=https://robcole-dev.github.io/cadius-miner/index.html)
+
+ ![Index Screenshot](documentation/testing/index-valid.png)
+- [W3C validator - Game](https://validator.w3.org/nu/?doc=https://robcole-dev.github.io/cadius-miner/game.html)
+
+ ![Game Screenshot](documentation/testing/game-valid.png)
+
+__CSS__
+
+No errors were found when passing through the official W3C Validation
+
+- [(Jigsaw) validator](https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Frobcole-dev.github.io%2Fcadius-miner)
+
+ ![CSS Screenshot](documentation/testing/css-valid.png)
+
+__JS__
+
+No errors were found when passing throught the official JS Hint Validation
+
+- Main JS
+
+![Main JS](documentation/testing/mainjs-valid.png)
+- Script JS
+
+![Script JS](documentation/testing/scriptjs-valid.png)
+- Main Menu JS
+
+![Main Menu JS](documentation/testing/main-menujs-valid.png)
+- Main Game JS
+
+![Main Game JS](documentation/testing/main-gamejs-valid.png)
+- Game Over JS
+
+![Game Over JS](documentation/testing/game-overjs-valid.png)
 
 ## Responsiveness
 
+__Full Screen - 1920x1080__
+![Full Screen](documentation/testing/fullscreen.png)
+
+__Tablet Screen__
+![Tablet Screen](documentation/testing/tablet.png)
+
+__Phone Screen - Samsung A71__
+
+![Samsung](documentation/testing/samsung-internet.jpg)
 
 ## User Story Tests
 
+- A section for how to play
+
+![how To Play](documentation/testing/how-to-play.png)
+- A section to display a score
+
+![Score](documentation/testing/score.png)
+- A ship that shoots
+
+![Ship Shots](documentation/testing/ship-shoot.png)
+- Asteroids that float from the top down
+
+![Asteroids](documentation/testing/asteroids.png)
+- A game over screen
+
+![Game Over](documentation/testing/game-over.png)
+
+## Fixed Bugs
+
+During development, I ran into some bugs, errors, and issues which I have successfully debugged and troubleshot.
+
+You can find them on the issues tracker on the repository. [Here](https://github.com/robcole-dev/cadius-miner/issues)
 
 ## Unfixed Bugs
 
