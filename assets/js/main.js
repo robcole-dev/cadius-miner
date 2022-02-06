@@ -12,7 +12,7 @@ function show() {
       display.classList.add("hide");
       footer.classList.add("footer-position");
     }
-  };
+  }
 
 // event listeners
 let infoButton = document.getElementById('show');
