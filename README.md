@@ -83,7 +83,7 @@ Below are a list of features I would have liked to implment but didn't have the 
 
 - __High Scores (Updated: 03/02/22)__
 
-    - ~~Currently there is no high scores kept within the game. I would like to add a high scores table that at the point of the game over screen the player gets to see if they have managed to get on the top 10 or not. If they managed to get on the top 10 then the game allows initials to be entered, which would be displayed on the top 10 board.~~
+    - :white_check_mark:~~Currently there is no high scores kept within the game. I would like to add a high scores table that at the point of the game over screen the player gets to see if they have managed to get on the top 10 or not. If they managed to get on the top 10 then the game allows initials to be entered, which would be displayed on the top 10 board.~~
         - 03/02/2022 - A High Score system has been added to the game, however this is stored in the players browser with LocalStorage. Once I have the knowledge and time to implement, I will look at storing the values in a database.
 
 - __Power ups__
@@ -100,12 +100,12 @@ Below are a list of features I would have liked to implment but didn't have the 
 
 - __Main Menu (Updated: 27/01/22)__
 
-    - ~~Currently when the game.html is loaded it loads the game straight away which isn't ideal. I would like to add a main menu which would give the player the control to start the game when they are ready. This would also give me the ability to add banners a high scores link and other cool features.~~
+    - :white_check_mark:~~Currently when the game.html is loaded it loads the game straight away which isn't ideal. I would like to add a main menu which would give the player the control to start the game when they are ready. This would also give me the ability to add banners a high scores link and other cool features.~~
         - 27/01/2022 - This feature has been mostly implemented. The ground work of the screen has been layed down and the player has to click the play button to start the game. Once the High scores table has been implemented, a link to that screen will be added to the main menu.
 
 - __Game Over (Updated: 27/01/22)__
 
-    - ~~Currently when the game is ended, it pauses the screen and displays a game over text. There is no way to restart or see your score. I would like to implment a new screen here that takes the player to a high score screen where they can enter initals if they get on the high scores board.~~
+    - :white_check_mark:~~Currently when the game is ended, it pauses the screen and displays a game over text. There is no way to restart or see your score. I would like to implment a new screen here that takes the player to a high score screen where they can enter initals if they get on the high scores board.~~
         - 27/01/2022 - This feature has been partly implmented. The ground work for the game over screen has been finished. Which allows me to expand the screen once other features like the High Scores board have been implmented.
 
 ## Technologies Used
