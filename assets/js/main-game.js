@@ -1,20 +1,20 @@
 /* jshint esversion: 8 */
 
-let player
-let asteroid
-let cursors
-let bullets
-let speed
-let stats
-let lastFired = 0
-let score = 0
-let scene
+let player;
+let asteroid;
+let cursors;
+let bullets;
+let speed;
+let stats;
+let lastFired = 0;
+let score = 0;
+let scene;
 let mainGame = new Phaser.Class({
     Extends: Phaser.Scene,
     initialize: function (){
         Phaser.Scene.call(this,{
         key: "mainGame",
-    })
+    });
 },
 
     preload: function() {
@@ -29,7 +29,7 @@ let mainGame = new Phaser.Class({
     create: function() {
         // defining this as scene
         scene = this;
-        score = 0
+        score = 0;
         // add background to game
         this.add.image(400,400,'sky');
         
@@ -195,4 +195,4 @@ let mainGame = new Phaser.Class({
     hitAsteroid(player, asteroid) {
         scene.scene.start('gameOver');
     },  
-})
+});
