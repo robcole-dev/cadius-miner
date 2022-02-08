@@ -19,6 +19,7 @@ body > footer {
 
 body {
     background: url('../images/background.jpg') no-repeat;
+    background-color: black;
 }
 
 header, nav {
@@ -118,7 +119,7 @@ li {
     color: aqua;
     font-family: 'Kanit', sans-serif;
     text-align: center;
-    font-size: 3vw;
+    font-size: 2vw;
     margin-bottom: 10px;
     border: 1px solid white;
     border-radius: 5px;
@@ -158,6 +159,12 @@ canvas {
     text-align: center;
     margin: 0;
 }
+
+/* controls text */
+.controls{
+    color: red;
+}
+
 /* hover over effect */
 .show:hover, .play:hover {
     color: red;
