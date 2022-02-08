@@ -73,6 +73,11 @@ header, nav {
     text-decoration: none;
     cursor: pointer;
 }
+
+#prev-hscore {
+    grid-row-start: 4;
+    grid-column-start: 2;
+}
 /* Heading */
 h1 {
     clear: both;
@@ -107,6 +112,18 @@ li {
     margin: 0;
     text-decoration: none;
 }
+/* Previous High Score message */
+#prev-hscore p {
+    background-color: #181717;
+    color: aqua;
+    font-family: 'Kanit', sans-serif;
+    text-align: center;
+    font-size: 3vw;
+    margin-bottom: 10px;
+    border: 1px solid white;
+    border-radius: 5px;
+
+}
 /* Game Area */
 #cadius-miner {
     text-align: center;
@@ -127,7 +144,7 @@ canvas {
     margin-bottom: 10px;
     color: aqua;
     text-align: center;
-    background-color: rgb(24, 23, 23);
+    background-color: #181717;
     border: 1px solid white;
     border-radius: 5px;
     grid-column-start: 2;
