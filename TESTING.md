@@ -65,9 +65,11 @@ No errors were found when passing throught the official JS Hint Validation
 ## Responsiveness
 
 __Full Screen - 1920x1080__
+
 ![Full Screen](documentation/testing/fullscreen.png)
 
 __Tablet Screen__
+
 ![Tablet Screen](documentation/testing/tablet.png)
 
 __Phone Screen - Samsung A71__
@@ -96,7 +98,11 @@ __Phone Screen - Samsung A71__
 
 During development, I ran into some bugs, errors, and issues which I have successfully debugged and troubleshot.
 
-You can find them on the issues tracker on the repository. [Here](https://github.com/robcole-dev/cadius-miner/issues)
+You can find them on the issues tracker on the repository. [Here](https://github.com/robcole-dev/cadius-miner/issues?q=is%3Aissue+is%3Aclosed)
+
+- How To Play button not working (Issue [#1](https://github.com/robcole-dev/cadius-miner/issues/1))
+- Crash when clicking play (Issue [#2](https://github.com/robcole-dev/cadius-miner/issues/2))
+- Pressing Space bar doesn't shoot (Issue [#3](https://github.com/robcole-dev/cadius-miner/issues/3))
 
 ## Unfixed Bugs
 
