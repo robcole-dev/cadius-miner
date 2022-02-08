@@ -136,11 +136,11 @@ For all testing, please refer to the [TESTING.md](TESTING.md) file.
 
 ## Deployment
 
- The site was deployed to GitHub pages. The steps to deploy are as follows: 
- - In the GitHub repository, navigate to the Settings tab 
- - From the source section drop-down menu, select the Main Branch 
- - Once the Main Branch has been selected, the page will be automatically refreshed with a detailed ribbon display to indicate the successful deployment
- - The Main Branch comes with a direct link to the Phaser Framework.
+The site was deployed to GitHub pages. The steps to deploy are as follows: 
+- In the GitHub repository, navigate to the Settings tab 
+- From the source section drop-down menu, select the Main Branch 
+- Once the Main Branch has been selected, the page will be automatically refreshed with a detailed ribbon display to indicate the successful deployment
+- The Main Branch comes with a direct link to the Phaser Framework. 
 
 [Link to deployed site](https://robcole-dev.github.io/cadius-miner/)
 
@@ -154,7 +154,11 @@ Alternatively, if using Git pod, you can click below to create your own workspac
 
 [![Open in Git pod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io/#https://github.com/robcole-dev/cadius-miner)
 
-Both of these options come with an external link in the game.html file to the Phaser Framework.
+### Phaser.io Setup
+
+Both of the above options come with an external link in the game.html file to the Phaser Framework.
+
+```<script src="https://cdnjs.cloudflare.com/ajax/libs/phaser/3.54.0-dev/phaser.min.js" integrity="sha512-ESIOdosIBobs4kX4GifFX1Xj1/+9MW0g5haesdtomtai7r9wNUdk2yxIcQauI6IM3wgx6QhxCkwOD/tybzFQQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>```
 
 ## Credits 
 
@@ -165,7 +169,7 @@ Both of these options come with an external link in the game.html file to the Ph
 ### Media
 
 The images used for the site and game
- - The Background [pexels](https://www.pexels.com/)
+ - The Background [pexels](https://www.pexels.com/photo/milky-way-galaxy-during-nighttime-1252890/)
  - The Ship [SeekPNG](https://www.seekpng.com/ipng/u2q8a9u2e6a9i1t4_spaceship-spaceship-spacecraft-game-design-concept-red-spaceship/)
  - The Asteroids [PNG EGG](https://www.pngegg.com/en/png-tsprz)
 
