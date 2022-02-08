@@ -18,6 +18,8 @@ The UX has a space style theme, which is consistant on both pages.
 ### Colour Scheme 
 The colour scheme used for the site and game is a mixture of Aqua, white, dark grey, red and green.
 
+The red blends with the ship which has a retro space theme. The aqua blends with the blues in the background webpage. The dark grey and white and to keep with a space theme and blends nicely with the background. The green is only on the game canvas and keeps with the retro style of the game. The asteroids are an asortment of colours and to save on images used, I have used JS code to change the RGB value of the image.
+
 ![Colour Swatch](documentation/readme/colour.png)
 
 ### Typography 
@@ -45,34 +47,34 @@ Below are a list of key features and future features.
 ### Existing Features
 - __The Landing Page__
 
- - The landing page includes a how to guide for people visiting the site and a play link to the game.
- - The How To Play link displays or hides a text field with instructions in.
+    - The landing page includes a how to guide for people visiting the site and a play link to the game.
+    - The How To Play link displays or hides a text field with instructions in.
 
 ![Landing Page](documentation/testing/landing-page.png)
 
 - __The Game Page__
 
- - The game page is kept clean and simple.
- - The game uses a framework called Phaser, the version used is 3.
+    - The game page is kept clean and simple.
+    - The game uses a framework called Phaser, the version used is 3.
 
 ![Game Page](documentation/testing/game-page.png)
 
 - __The Game__
 
- - The game has 2 types of control built in. The first is the mouse or touch for mobile users, which drags the ship from left to right. The second is the arrow keys on a keyboard with the space bar to shoot.
- - The game keeps track of the players score in the top right corner.
+    - The game has 2 types of control built in. The first is the mouse or touch for mobile users, which drags the ship from left to right. The second is the arrow keys on a keyboard with the space bar to shoot.
+    - The game keeps track of the players score in the top right corner.
 
 ![Game](documentation/testing/game-playing.png)
 
 - __The Main Menu__
 
-- The first screen on the game allows the user to click play once they are ready to start playing the game.
+    - The first screen on the game allows the user to click play once they are ready to start playing the game.
 
 ![Game Menu](documentation/testing/game-menu.png)
 
 - __The Game Over screen__
 
-- This screen is displayed once the player has hit an asteroid. This tells the player that the game is over and shows their score. It also allows the user to restart the game when they are ready.
+    - This screen is displayed once the player has hit an asteroid. This tells the player that the game is over and shows their score. It also allows the user to restart the game when they are ready.
 
 ![Game Over](documentation/testing/game-gameover.png)
 
@@ -81,30 +83,30 @@ Below are a list of features I would have liked to implment but didn't have the 
 
 - __High Scores (Updated: 03/02/22)__
 
- - ~~Currently there is no high scores kept within the game. I would like to add a high scores table that at the point of the game over screen the player gets to see if they have managed to get on the top 10 or not. If they managed to get on the top 10 then the game allows initials to be entered, which would be displayed on the top 10 board.~~
-    - 03/02/2022 - A High Score system has been added to the game, however this is stored in the players browser with LocalStorage. Once I have the knowledge and time to implement, I will look at storing the values in a database.
+    - ~~Currently there is no high scores kept within the game. I would like to add a high scores table that at the point of the game over screen the player gets to see if they have managed to get on the top 10 or not. If they managed to get on the top 10 then the game allows initials to be entered, which would be displayed on the top 10 board.~~
+        - 03/02/2022 - A High Score system has been added to the game, however this is stored in the players browser with LocalStorage. Once I have the knowledge and time to implement, I will look at storing the values in a database.
 
 - __Power ups__
 
- - There are currently no power ups in the game, it is a simple shooter. I would like to add the ability to collect power ups such as shields and more powerfull guns. This would add more depth to the game and would help the player score more points.
+    - There are currently no power ups in the game, it is a simple shooter. I would like to add the ability to collect power ups such as shields and more powerfull guns. This would add more depth to the game and would help the player score more points.
 
 - __Lives__
 
- - There is currently no life counter in the game, so once the ship crashes into an asteroid it's game over. Adding a life counter would allow for a more interesting game. This would also allow the player to continue scoring points to get onto the high scores board.
+    - There is currently no life counter in the game, so once the ship crashes into an asteroid it's game over. Adding a life counter would allow for a more interesting game. This would also allow the player to continue scoring points to get onto the high scores board.
 
 - __Enermies__
 
- - Currently the only NPC (Non Player Characters) are the asteroids. I would like to add more depth to the game by adding other bodies like alien ships that shoot back at the player. This would give the player more of a challenge in the game.
+    - Currently the only NPC (Non Player Characters) are the asteroids. I would like to add more depth to the game by adding other bodies like alien ships that shoot back at the player. This would give the player more of a challenge in the game.
 
 - __Main Menu (Updated: 27/01/22)__
 
- - ~~Currently when the game.html is loaded it loads the game straight away which isn't ideal. I would like to add a main menu which would give the player the control to start the game when they are ready. This would also give me the ability to add banners a high scores link and other cool features.~~
-    - 27/01/2022 - This feature has been mostly implemented. The ground work of the screen has been layed down and the player has to click the play button to start the game. Once the High scores table has been implemented, a link to that screen will be added to the main menu.
+    - ~~Currently when the game.html is loaded it loads the game straight away which isn't ideal. I would like to add a main menu which would give the player the control to start the game when they are ready. This would also give me the ability to add banners a high scores link and other cool features.~~
+        - 27/01/2022 - This feature has been mostly implemented. The ground work of the screen has been layed down and the player has to click the play button to start the game. Once the High scores table has been implemented, a link to that screen will be added to the main menu.
 
 - __Game Over (Updated: 27/01/22)__
 
- - ~~Currently when the game is ended, it pauses the screen and displays a game over text. There is no way to restart or see your score. I would like to implment a new screen here that takes the player to a high score screen where they can enter initals if they get on the high scores board.~~
-    - 27/01/2022 - This feature has been partly implmented. The ground work for the game over screen has been finished. Which allows me to expand the screen once other features like the High Scores board have been implmented.
+    - ~~Currently when the game is ended, it pauses the screen and displays a game over text. There is no way to restart or see your score. I would like to implment a new screen here that takes the player to a high score screen where they can enter initals if they get on the high scores board.~~
+        - 27/01/2022 - This feature has been partly implmented. The ground work for the game over screen has been finished. Which allows me to expand the screen once other features like the High Scores board have been implmented.
 
 ## Technologies Used
 
