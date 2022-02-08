@@ -16,7 +16,7 @@ let gameOver = new Phaser.Class({
     create: function() {
         // define scene as this
         scene = this;
-        let hscore;
+        let hscore = "hscore";
         // define highscore as the players local storage score
         let highscore = localStorage.getItem(hscore);
         // If score is higher than highscore write it to local storage
