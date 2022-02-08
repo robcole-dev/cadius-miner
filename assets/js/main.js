@@ -17,7 +17,7 @@ function show() {
 
 // Previous high score message
 
-if (localStorage.getItem("hscore") > 0) {
+if (localStorage.getItem("hscore")) {
   document.getElementById("prev-hscore").innerHTML = `<p>Your Previous High Score was ${localStorage.getItem("hscore")}! Can you beat it?</p>`;
 } else {
   document.getElementById("prev-hscore").innerHTML = '<p>You currently have no high score!<br>Click Play and try your luck!</p>';
