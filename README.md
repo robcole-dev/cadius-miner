@@ -6,11 +6,11 @@ To visit the live version of the game (hosted by Github Pages) click [here](http
 ![Responsive Mockup](documentation/testing/responsive.png)
 
 ## User Stories
- - A section for how to play
- - A section to display a score
- - A ship that shoots
- - Asteroids that float from the top down
- - A game over screen 
+ - As a user, I would like to see instructions on how to play
+ - As a user, I want to be able to see my current score while playing the game
+ - As a user, I want to be able to control when the character fires at the asteroids
+ - As a user, I want the asteroids to float down from the top of the screen
+ - As a user, I want a game over screen to appear when I have hit an asteroid
 
 ## UX
 The UX has a space style theme, which is consistant on both pages.

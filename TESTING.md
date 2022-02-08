@@ -76,19 +76,19 @@ __Phone Screen - Samsung A71__
 
 ## User Story Tests
 
-- A section for how to play
+- As a user, I would like to see instructions on how to play
 
 ![how To Play](documentation/testing/how-to-play.png)
-- A section to display a score
+- As a user, I want to be able to see my current score while playing the game
 
 ![Score](documentation/testing/score.png)
-- A ship that shoots
+- As a user, I want to be able to control when the character fires at the asteroids
 
 ![Ship Shots](documentation/testing/ship-shoot.png)
-- Asteroids that float from the top down
+- As a user, I want the asteroids to float down from the top of the screen
 
 ![Asteroids](documentation/testing/asteroids.png)
-- A game over screen
+- As a user, I want a game over screen to appear when I have hit an asteroid
 
 ![Game Over](documentation/testing/game-over.png)
 
