@@ -176,4 +176,4 @@ The images used for the site and game
 ### Acknowledgments
 
 - Tim (My Mentor)
-- The community over at Phaser via their Discord server
+- The community over at Phaser via their Discord server [link here](https://discord.gg/phaser)
