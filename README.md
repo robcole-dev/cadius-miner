@@ -13,12 +13,12 @@ To visit the live version of the game (hosted by Github Pages) click [here](http
  - As a user, I want a game over screen to appear when I have hit an asteroid
 
 ## UX
-The UX has a space style theme, which is consistant on both pages.
+The UX has a space style theme, which is consistent on both pages.
 
 ### Colour Scheme 
 The colour scheme used for the site and game is a mixture of Aqua, white, dark grey, red and green.
 
-The red blends with the ship which has a retro space theme. The aqua blends with the blues in the background webpage. The dark grey and white and to keep with a space theme and blends nicely with the background. The green is only on the game canvas and keeps with the retro style of the game. The asteroids are an asortment of colours and to save on images used, I have used JS code to change the RGB value of the image.
+The red blends with the ship which has a retro space theme. The aqua blends with the blues in the background webpage. The dark grey and white and to keep with a space theme and blends nicely with the background. The green is only on the game canvas and keeps with the retro style of the game. The asteroids are an assortment of colours and to save on images used, I have used JS code to change the RGB value of the image.
 
 ![Colour Swatch](documentation/readme/colour.png)
 
@@ -79,34 +79,34 @@ Below are a list of key features and future features.
 ![Game Over](documentation/testing/game-gameover.png)
 
 ### Features Left to Implement
-Below are a list of features I would have liked to implment but didn't have the time or knowledge to:
+Below are a list of features I would have liked to implement but didn't have the time or knowledge to:
 
 - __High Scores (Updated: 03/02/22)__
 
-    - :white_check_mark:~~Currently there is no high scores kept within the game. I would like to add a high scores table that at the point of the game over screen the player gets to see if they have managed to get on the top 10 or not. If they managed to get on the top 10 then the game allows initials to be entered, which would be displayed on the top 10 board.~~
+    - :white_check_mark:~~Currently there are no high scores kept within the game. I would like to add a high scores table that at the point of the game over screen the player gets to see if they have managed to get on the top 10 or not. If they managed to get on the top 10 then the game allows initials to be entered, which would be displayed on the top 10 board.~~
         - 03/02/2022 - A High Score system has been added to the game, however this is stored in the players browser with LocalStorage. Once I have the knowledge and time to implement, I will look at storing the values in a database.
 
 - __Power ups__
 
-    - There are currently no power ups in the game, it is a simple shooter. I would like to add the ability to collect power ups such as shields and more powerfull guns. This would add more depth to the game and would help the player score more points.
+    - There are currently no power ups in the game, it is a simple shooter. I would like to add the ability to collect power ups such as shields and more powerful guns. This would add more depth to the game and would help the player score more points.
 
 - __Lives__
 
     - There is currently no life counter in the game, so once the ship crashes into an asteroid it's game over. Adding a life counter would allow for a more interesting game. This would also allow the player to continue scoring points to get onto the high scores board.
 
-- __Enermies__
+- __Enemies__
 
     - Currently the only NPC (Non Player Characters) are the asteroids. I would like to add more depth to the game by adding other bodies like alien ships that shoot back at the player. This would give the player more of a challenge in the game.
 
 - __Main Menu (Updated: 27/01/22)__
 
     - :white_check_mark:~~Currently when the game.html is loaded it loads the game straight away which isn't ideal. I would like to add a main menu which would give the player the control to start the game when they are ready. This would also give me the ability to add banners a high scores link and other cool features.~~
-        - 27/01/2022 - This feature has been mostly implemented. The ground work of the screen has been layed down and the player has to click the play button to start the game. Once the High scores table has been implemented, a link to that screen will be added to the main menu.
+        - 27/01/2022 - This feature has been mostly implemented. The ground work of the screen has been laid down and the player has to click the play button to start the game. Once the High scores table has been implemented, a link to that screen will be added to the main menu.
 
 - __Game Over (Updated: 27/01/22)__
 
     - :white_check_mark:~~Currently when the game is ended, it pauses the screen and displays a game over text. There is no way to restart or see your score. I would like to implment a new screen here that takes the player to a high score screen where they can enter initals if they get on the high scores board.~~
-        - 27/01/2022 - This feature has been partly implmented. The ground work for the game over screen has been finished. Which allows me to expand the screen once other features like the High Scores board have been implmented.
+        - 27/01/2022 - This feature has been partly implemented. The ground work for the game over screen has been finished. Which allows me to expand the screen once other features like the High Scores board have been implemented.
 
 ## Technologies Used
 
