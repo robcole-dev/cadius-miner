@@ -1,6 +1,6 @@
 # Testing
 
-Below is a list of test that have been carried out with screenshots.
+Below is a list of tests that have been carried out with screenshots.
 
 ## Browser Compatibility
 The below browsers have been tested with the deployed site.
